@@ -1,9 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Routes, Route, BrowserRouter as Router } from 'react-router-dom';
-import Home from './components';
-import Routines from './components';
-import Activities from './components';
+import { Home, Routines, Activities } from './components';
 
 const App = () => {
     return <div>
