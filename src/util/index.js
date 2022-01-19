@@ -1,14 +1,14 @@
-const BASE_URL = 'http://fitnesstrac-kr.herokuapp.com/api/'
+const BASE_URL = 'https://fitnesstrac-kr.herokuapp.com/api'
 
 export const fetchActivities = async () => {
     try {
-         const response = await fetch('http://fitnesstrac-kr.herokuapp.com/api/activities', {
-             headers: {
-                 'Content-Type': 'application/json', 
-             },
-         }).then(response => response.json())
-         const result = await response.json()
-         return result.data.activities   
+        const response = await fetch(`${BASE_URL}/activities`, {
+            headers: {
+                'Content-Type': 'application/json', 
+            },
+        })
+        const result = await response.json()
+        return result;  
     }catch (error) {
         console.log(error)
     }
@@ -16,13 +16,13 @@ export const fetchActivities = async () => {
 
 export const fetchRoutines = async () => {
     try {
-        const response = await fetch('http://fitnesstrac-kr.herokuapp.com/api/routines', {
+        const response = await fetch(`${BASE_URL}/routines`, {
             headers: {
                 'Content-Type': 'application/json',
             },
-        }).then(response => response.json())
-        const result = await response.json()
-        return result.data.routines
+        })
+        const result = await response.json();
+        return result;
     } catch (error) {
         console.log(error)
     }
